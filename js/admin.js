@@ -45,6 +45,6 @@ function createTableRow(data, index) {
   return tr;
 }
 
-window.onload = () => {
-  carregarEventos();
-};
+
+carregarEventos();
+

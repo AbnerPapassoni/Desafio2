@@ -33,6 +33,8 @@ formEvento.onsubmit = async (e) => {
     if (response.ok) {
       alert("Dados excluidos com sucesso")
       window.location.replace("./admin.html");
+    } else{
+      alert(`Erro: ${response.status}`)
     }
   } catch (error) {
     console.log(error)

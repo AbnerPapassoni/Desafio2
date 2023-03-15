@@ -34,7 +34,9 @@ formEvento.onsubmit = async (e) => {
     if (response.ok){
       alert("Evento cadastrado com sucesso")
       window.location.replace("./admin.html");
-    }  
+    } else{
+      alert(`Erro: ${response.status}, verifique os dados e tente novamente`)
+    }
   } catch (error) {
     console.log(error)
   }

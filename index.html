@@ -11,12 +11,12 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
     <header class="d-flex justify-content-center align-items-center">
-      <img src="img/Sound-logo (1).png" width="300" alt="" />
+      <img src="./img/Sound-logo (1).png" width="300" alt="" />
     </header>
     <main>
       <section
@@ -37,8 +37,53 @@
           id="container-evento"
         ></div>
 
+        <!--modal -->
+        <div id="telaModal" id_evento class="modal">
+          <div class="modal-content">
+            <span id="closeBtn" class="close">&times;</span>
+            <p>
+              Para reservar seu ingresso neste evento, preencha os campos abaixo
+              com seus dados!
+            </p>
+            <form class="col-6" id="create-event-form">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  aria-describedby="nome"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Seu email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Quantidade de Ingressos</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="qtdIngresso"
+                  aria-describedby="number"
+                />
+              </div>
+              <br />
+              <button type="submit" class="btn btn-primary">enviar</button>
+            </form>
+          </div>
+        </div>
+        <!-- Fim do modal-->
+
         <div class="container text-center">
-          <a href="eventos.html" class="btn btn-secondary"
+          <a href="./eventos.html" class="btn btn-secondary"
             >ver todos os eventos</a
           >
         </div>
@@ -79,7 +124,7 @@
               </p>
             </div>
             <div class="col">
-              <img src="img/music.svg" width="500px" />
+              <img src="./img/music.svg" width="500px" />
             </div>
           </div>
         </div>
@@ -88,15 +133,15 @@
     <footer>
       <div class="container d-flex justify-content-center align-items-center">
         <a href="#">
-          <img src="img/Sound-logo-black (1).png" width="200px" alt="" />
+          <img src="./img/Sound-logo-black (1).png" width="200px" alt="" />
         </a>
         <nav>
           <ul>
             <li>
-              <a href="eventos.html">eventos</a>
+              <a href="./eventos.html">eventos</a>
             </li>
             <li>
-              <a href="admin.html">painel administrativo</a>
+              <a href="./admin.html">painel administrativo</a>
             </li>
           </ul>
         </nav>

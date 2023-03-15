@@ -1,13 +1,14 @@
 const formEvento = document.querySelector("form");
-let bannerEvento = document.getElementById("banner");
-let nomeEvento = document.getElementById("nome");
-let atracoesEvento = document.getElementById("atracoes");
-let descricaoEvento = document.getElementById("descricao");
-let dataEvento = document.getElementById("data");
-let lotacaoEvento = document.getElementById("lotacao");
+
 const params = new URLSearchParams(window.location.search);
 
 window.onload = async () => {
+  let bannerEvento = document.getElementById("banner");
+  let nomeEvento = document.getElementById("nome");
+  let atracoesEvento = document.getElementById("atracoes");
+  let descricaoEvento = document.getElementById("descricao");
+  let dataEvento = document.getElementById("data");
+  let lotacaoEvento = document.getElementById("lotacao");
   const response = await fetch(
     `https://soundgarden-api.vercel.app/events/${params.get("id")}`
   );
@@ -35,7 +36,7 @@ formEvento.onsubmit = async (e) => {
     attractions: [atracoesEvento],
     description: descricaoEvento,
     scheduled: dataEvento,
-    number_tickets: lotacaoEvento.value
+    number_tickets: lotacaoEvento,
   };
 
   const options = {
@@ -55,7 +56,7 @@ formEvento.onsubmit = async (e) => {
       alert("Dados editados com sucesso");
       window.location.replace("./admin.html");
     } else {
-      alert("Falha ao editar dados");
+      alert(`Erro: ${response.status}, verifique os dados e tente novamente`);
     }
   } catch (error) {
     console.log(error);

@@ -1,10 +1,14 @@
 const carregarEventos = async () => {
-  const response = await fetch("https://soundgarden-api.vercel.app/events");
-  const data = await response.json();
-  const table = document.querySelector(".tabela-evento-body");
-  for (let i = 0; i < data.length; i++) {
-    const tr = createTableRow(data[i], i);
-    table.appendChild(tr);
+  try {
+    const response = await fetch("https://soundgarden-api.vercel.app/events");
+    const data = await response.json();
+    const table = document.querySelector(".tabela-evento-body");
+    for (let i = 0; i < data.length; i++) {
+      const tr = createTableRow(data[i], i);
+      table.appendChild(tr);
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -45,6 +49,4 @@ function createTableRow(data, index) {
   return tr;
 }
 
-
 carregarEventos();
-

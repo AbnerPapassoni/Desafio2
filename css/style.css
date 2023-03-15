@@ -1,18 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 body{
     font-family: 'Questrial', sans-serif;
+    padding: 5px;
 }
 
 .img-responsive {
     max-width: 100%;
 }
 
-header {
+.cabecalho {
     position: relative;
     box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 27%);
     width: 100%;
     background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
+
+/* estilo da section do banner rotativo */
+.section01{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 80vh;
+    overflow: hidden;
+  
+}
+.containerBanner{
+    display: flex; 
+    width: 100%;
+}
+
+ #imagemBanner{
+    width: 100%;
+    height: 100%;
+ }
+
 aside {
     min-height: 100vh;
 }

@@ -128,6 +128,7 @@ footer nav ul li  {
     background-color: rgba(0,0,0,0.6); 
     align-items: center;
     align-content: center;
+    display: none;
 }
 
 .modal-content {

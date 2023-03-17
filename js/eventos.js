@@ -37,13 +37,12 @@ function abrirModal(event) {
 const mybutton = document.querySelector(".btn-primary");
 
 mybutton.addEventListener("click", function(event) {
-  abrirModalIndex(event);
+  abrirModal(event);
 });
 
 const form = document.querySelector('#telaModal form')
 form.addEventListener('submit', fazerReservaIngresso)
 
-console.log(form);
 
 async function fazerReservaIngresso(event) {
   console.log("teste");

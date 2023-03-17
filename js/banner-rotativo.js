@@ -1,10 +1,10 @@
 // array com as imagens do banner
 var imagensBanner = [
-    "/js/imagensBanner/img-1.jpg",
-    "/js/imagensBanner/img-2.jpg",
-    "/js/imagensBanner/img-3.jpg",
-    "/js/imagensBanner/img-4.jpg",
-    "/js/imagensBanner/img-5.jpg"
+    "./js/imagensBanner/img-1.jpg",
+    "./js/imagensBanner/img-2.jpg",
+    "./js/imagensBanner/img-3.jpg",
+    "./js/imagensBanner/img-4.jpg",
+    "./js/imagensBanner/img-5.jpg"
   ];
   
   // intervalo de tempo para troca das imagens (em milissegundos)

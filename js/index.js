@@ -38,7 +38,7 @@ function abrirModal(event) {
 const mybutton = document.querySelector(".btn-primary");
 
 mybutton.addEventListener("click", function(event) {
-  abrirModalIndex(event);
+  abrirModal(event);
 });
 
 const form = document.querySelector('#telaModal form')
